@@ -1,18 +1,6 @@
 [
   {
     "id": 324,
-    "firstName": "",
-    "lastName": "",
-    "email": "",
-    "phone": "",
-    "status": "VIEWED",
-    "date": "11 JUNE",
-    "time": "19:00",
-    "bid": true,
-    "bidAmount": 250.000
-  },
-  {
-    "id": 324,
     "firstName": "Friedrich",
     "lastName": "Heinrich",
     "email": "Friedrich.heinrich@gmail.com",
@@ -84,7 +72,7 @@
     "bidAmount": 250.000
   },
   {
-    "id": 324,
+    "id": 330,
     "firstName": "Gottschalk",
     "lastName": "Godeslack",
     "email": "gottschalk.godeslack@gmail.com",
