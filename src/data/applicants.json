@@ -1,0 +1,98 @@
+[
+  {
+    "id": 324,
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "phone": "",
+    "status": "VIEWED",
+    "date": "11 JUNE",
+    "time": "19:00",
+    "bid": true,
+    "bidAmount": 250.000
+  },
+  {
+    "id": 324,
+    "firstName": "Friedrich",
+    "lastName": "Heinrich",
+    "email": "Friedrich.heinrich@gmail.com",
+    "phone": "+49 146 344 23811",
+    "status": "APPOINTMENT",
+    "date": "22 JULY",
+    "time": "14:00",
+    "bid": false,
+    "bidAmount": 0
+  },
+  {
+    "id": 325,
+    "firstName": "Hans",
+    "lastName": "Ulrich",
+    "email": "Hans-Ulrich@gmail.com",
+    "phone": "+49 146 344 23811",
+    "status": "APPOINTMENT",
+    "date": "22 JULY",
+    "time": "14:00",
+    "bid": false,
+    "bidAmount": 0
+  },
+  {
+    "id": 326,
+    "firstName": "Karlheinz",
+    "lastName": "Brandenburg",
+    "email": "karlheinzbrandenburg@gmail.com",
+    "phone": "+49 146 344 23811",
+    "status": "APPOINTMENT",
+    "date": "22 JULY",
+    "time": "14:00",
+    "bid": false,
+    "bidAmount": 0
+  },
+  {
+    "id": 327,
+    "firstName": "Maxmillian",
+    "lastName": "Von Mustermann",
+    "email": "max.mustermann@gmail.com",
+    "phone": "+49 146 344 23811",
+    "status": "VIEWED",
+    "date": "11 JUNE",
+    "time": "19:00",
+    "bid": true,
+    "bidAmount": 250.000
+  },
+  {
+    "id": 328,
+    "firstName": "Bernhard",
+    "lastName": "Weiß",
+    "email": "bernhard.weiß@gmail.com",
+    "phone": "+49 146 344 23811",
+    "status": "VIEWED",
+    "date": "11 JUNE",
+    "time": "19:00",
+    "bid": true,
+    "bidAmount": 250.000
+  },
+  {
+    "id": 329,
+    "firstName": "Hansjörg",
+    "lastName": "Felmy",
+    "email": "Hansjörg.felmy@gmail.com",
+    "phone": "+49 146 344 23811",
+    "status": "VIEWED",
+    "date": "11 JUNE",
+    "time": "19:00",
+    "bid": true,
+    "bidAmount": 250.000
+  },
+  {
+    "id": 324,
+    "firstName": "Gottschalk",
+    "lastName": "Godeslack",
+    "email": "gottschalk.godeslack@gmail.com",
+    "phone": "+49 146 344 23811",
+    "status": "VIEWED",
+    "date": "11 JUNE",
+    "time": "19:00",
+    "bid": true,
+    "bidAmount": 250.000
+  }
+]
