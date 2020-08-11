@@ -9,7 +9,6 @@ const useStyles = makeStyles({
   root: {
     border: "1px solid #E6E6E6;",
     width: "100%",
-    "::-webkit-input-placeholder": "31px",
   },
 });
 
