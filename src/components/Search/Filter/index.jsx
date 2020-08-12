@@ -1,8 +1,8 @@
 import React from "react";
-import "./Filter.scss"
+import "./Filter.scss";
 import Dropdown from "react-bootstrap/Dropdown";
 
-const Filter = ({name}) => {
+const Filter = ({ name }) => {
   return (
     <Dropdown>
       <Dropdown.Toggle variant="white btn-lg" id="dropdown-basic">
