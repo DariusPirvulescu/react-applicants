@@ -16,7 +16,7 @@ const ApplicantCard = ({
 }) => {
   const initials = `${firstName.charAt(0)}${lastName.charAt(0)}`;
   return (
-    <Card className="card">
+    <Card className="applicant-card">
       <div className="card-avatar">
         <Avatar initials={initials} />
       </div>
