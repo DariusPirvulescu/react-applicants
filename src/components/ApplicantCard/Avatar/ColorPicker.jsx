@@ -10,4 +10,4 @@ const setColor = () => {
   return avatarColors[keys[(keys.length * Math.random()) << 0]];
 };
 
-module.exports = setColor;
+export default setColor;
