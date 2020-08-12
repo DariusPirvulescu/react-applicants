@@ -6,7 +6,7 @@ const Top = () => {
   return (
     <div className="top">
       <ArrowBackIcon className="arrow" />
-      <h2>Applicants</h2>
+      <h1>Applicants</h1>
     </div>
   );
 };
