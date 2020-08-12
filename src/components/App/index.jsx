@@ -6,8 +6,11 @@ import applicants from "../../data/applicants.json";
 import ApplicantList from "./ApplicantList";
 
 // change App component to class with ComponentDidMount() fct for loading while fetching
-
-// done take the applicants.json sepparate them by status
+// error message if the request failed to load 
+// implement search
+// remake for web
+// add bid badge to card
+// 
 const groupedApplicants = {
   Appointment_Set: [],
   Property_Viewed: [],
@@ -19,19 +22,6 @@ applicants.map((a) => {
   groupedApplicants[a.status].push(a);
   return groupedApplicants;
 });
-
-// Object.entries(groupedApplicants).map((e) => {
-//   console.log(e)
-// })
-// console.log(Object.entries(groupedApplicants))
-// // “Appointment_Set”, “Property_Viewed”, “Interested” and
-// // “Offer_Accepted”
-
-// create applicantList comp
-
-// the applicantList takes different names for h1 title and the array of applicants
-
-//
 
 function App() {
   return (

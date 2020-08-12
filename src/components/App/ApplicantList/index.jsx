@@ -5,7 +5,7 @@ import ApplicantCard from "../../ApplicantCard";
 const ApplicantList = ({ title, applicants }) => {
   return (
     <div className="applicant-list">
-      <h1>{title}</h1>
+      <h1>{title} ({applicants.length})</h1>
       <div className="horizontal-scroll">
         {applicants.map((applicant) => {
           return (
