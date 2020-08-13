@@ -6,7 +6,6 @@ import applicantsData from "../../data/applicants.json";
 import GroupedLists from "./GroupedLists";
 import Loading from "../Loading";
 
-// error message if the request failed to load
 // implement search
 // remake for web
 
@@ -42,7 +41,6 @@ class Content extends Component {
   }
 
   handleClick() {
-    console.log(this.state.failed)
     this.setState({ failed: false });
   }
 
