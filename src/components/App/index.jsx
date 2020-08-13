@@ -14,8 +14,8 @@ import ApplicantList from "./ApplicantList";
 const groupedApplicants = {
   Appointment_Set: [],
   Property_Viewed: [],
-  interested: [],
-  offerACcepted: [],
+  Interested: [],
+  Offer_Accepted: [],
 };
 
 applicants.map((a) => {

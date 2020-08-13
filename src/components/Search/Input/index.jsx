@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const StyledTextField = styled(TextField)`
   & ::-webkit-input-placeholder {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 `;
 
@@ -19,7 +19,7 @@ const SearchInput = () => {
         variant="outlined"
         placeholder="Search for applicant"
         InputProps={{
-          style: { fontSize: "1.4rem" },
+          style: { fontSize: "1.2rem" },
           startAdornment: (
             <InputAdornment position="start">
               <SearchIcon />

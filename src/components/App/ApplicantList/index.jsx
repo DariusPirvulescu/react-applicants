@@ -3,9 +3,13 @@ import "./ApplicantList.scss";
 import ApplicantCard from "../../ApplicantCard";
 
 const ApplicantList = ({ title, applicants }) => {
+  //   Appointment_Set”, “Property_Viewed”, “Interested” and
+  // “Offer_Accepted”
   return (
     <div className="applicant-list">
-      <h1>{title} ({applicants.length})</h1>
+      <h1>
+        {title.replace("_", " ")} ({applicants.length})
+      </h1>
       <div className="horizontal-scroll">
         {applicants.map((applicant) => {
           return (
