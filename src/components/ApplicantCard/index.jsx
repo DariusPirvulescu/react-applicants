@@ -15,6 +15,15 @@ const ApplicantCard = ({
   ...prop
 }) => {
   const initials = `${firstName.charAt(0)}${lastName.charAt(0)}`;
+
+  const badgeStatus = () => {
+    return (
+      (status === "Appointment_Set" && "APPOINTMENT") ||
+      (status === "Property_Viewed" && "VIEWED") ||
+      (status === "Offer_Accepted" && "ACCEPTED") ||
+      "INTERESTED"
+    );
+  };
   return (
     <Card className="applicant-card">
       <div className="card-avatar">
@@ -27,7 +36,7 @@ const ApplicantCard = ({
         <Card.Text>{phone}</Card.Text>
         <Card.Text>{email}</Card.Text>
         <Badge variant="secondary">
-          {status} {date} {time}
+          {badgeStatus()} {date} {time}
         </Badge>
       </Card.Body>
     </Card>
