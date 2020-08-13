@@ -12,7 +12,9 @@ const ApplicantCard = ({
   status,
   date,
   time,
-  ...prop
+  bid,
+  bidAmount,
+  bidCurrency,
 }) => {
   const initials = `${firstName.charAt(0)}${lastName.charAt(0)}`;
 
@@ -35,9 +37,16 @@ const ApplicantCard = ({
         </Card.Title>
         <Card.Text>{phone}</Card.Text>
         <Card.Text>{email}</Card.Text>
-        <Badge variant="secondary">
-          {badgeStatus()} {date} {time}
-        </Badge>
+        <div className="badge-container">
+          <Badge variant="secondary" className="badge-status">
+            {badgeStatus()} {date} {time}
+          </Badge>
+          {bid && (
+            <Badge variant="warning" className="badge-bid">
+              BID {bidAmount}{bidCurrency}
+            </Badge>
+          )}
+        </div>
       </Card.Body>
     </Card>
   );
