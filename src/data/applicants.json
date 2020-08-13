@@ -82,5 +82,17 @@
     "time": "19:00",
     "bid": true,
     "bidAmount": 250.000
+  },
+  {
+    "id": 3225,
+    "firstName": "Nick",
+    "lastName": "Offerman",
+    "email": "nick.ofstoneman@gmail.com",
+    "phone": "+49 543 344 23811",
+    "status": "Interested",
+    "date": "",
+    "time": "",
+    "bid": false,
+    "bidAmount": 0
   }
 ]
