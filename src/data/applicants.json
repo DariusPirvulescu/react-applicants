@@ -38,14 +38,15 @@
   {
     "id": 327,
     "firstName": "Maxmillian",
-    "lastName": "Von Mustermann",
+    "lastName": "Mustermann",
     "email": "max.mustermann@gmail.com",
     "phone": "+49 146 344 23811",
     "status": "Property_Viewed",
     "date": "11 JUNE",
     "time": "19:00",
     "bid": true,
-    "bidAmount": 250.000
+    "bidAmount": "250.000",
+    "bidCurrency": "€"
   },
   {
     "id": 328,
@@ -57,7 +58,8 @@
     "date": "11 JUNE",
     "time": "19:00",
     "bid": true,
-    "bidAmount": 250.000
+    "bidAmount": "250.000",
+    "bidCurrency": "€"
   },
   {
     "id": 329,
@@ -69,7 +71,8 @@
     "date": "11 JUNE",
     "time": "19:00",
     "bid": true,
-    "bidAmount": 250.000
+    "bidAmount": "250.000",
+    "bidCurrency": "€"
   },
   {
     "id": 330,
@@ -81,7 +84,8 @@
     "date": "11 JUNE",
     "time": "19:00",
     "bid": true,
-    "bidAmount": 250.000
+    "bidAmount": "250.000",
+    "bidCurrency": "€"
   },
   {
     "id": 3225,
