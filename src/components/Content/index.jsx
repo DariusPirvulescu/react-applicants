@@ -9,7 +9,6 @@ import Loading from "../Loading";
 // error message if the request failed to load
 // implement search
 // remake for web
-// Done add bid badge to card
 
 class Content extends Component {
   constructor() {
@@ -17,6 +16,7 @@ class Content extends Component {
     this.state = {
       applicants: {},
       loaded: false,
+      failed: true,
     };
   }
 
@@ -41,8 +41,30 @@ class Content extends Component {
     }, 2000);
   }
 
+  handleClick() {
+    console.log(this.state.failed)
+    this.setState({ failed: false });
+  }
+
   render() {
-    const { applicants, loaded } = this.state;
+    const { applicants, loaded, failed } = this.state;
+    if (failed) {
+      return (
+        <div className="content">
+          <Top />
+          <div className="failed">
+            <h4>Something went wrong while loading Applicants</h4>
+            <button
+              className="btn btn-warning btn-lg"
+              onClick={this.handleClick.bind(this)}
+              type="button"
+            >
+              Try again
+            </button>
+          </div>
+        </div>
+      );
+    }
 
     return (
       <div className="content">
