@@ -25,6 +25,7 @@ const ApplicantList = ({ title, applicants }) => {
               time={applicant.time}
               bid={applicant.bid}
               bidAmount={applicant.bidAmount}
+              bidCurrency={applicant.bidCurrency}
             />
           );
         })}
