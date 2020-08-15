@@ -7,14 +7,14 @@ const Search = ({ value, change }) => {
   return (
     <div className="search">
       <div className="search-input">
-        <SearchInput value={value} change={change}/>
+        <SearchInput value={value} change={change} />
       </div>
       <div className="filter-container">
         <Filter name="Bids" />
         <Filter name="Status" />
       </div>
-     </div>
-  )
-}
+    </div>
+  );
+};
 
 export default Search;

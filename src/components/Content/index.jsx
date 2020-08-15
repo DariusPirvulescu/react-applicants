@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Content.scss";
+import { pick } from "lodash";
 import Top from "../Top";
 import Search from "../Search";
 import applicantsData from "../../data/applicants.json";
@@ -7,9 +8,9 @@ import GroupedLists from "./GroupedLists";
 import Loading from "../Loading";
 
 // implement search
-// // search for multiple fields
+// // done search for multiple fields
 // // search updates URL
-// // get search query from URL 
+// // get search query from URL
 // remake for web
 
 class Content extends Component {
@@ -17,28 +18,40 @@ class Content extends Component {
     super();
     this.state = {
       applicants: applicantsData,
-      loaded: true,
+      loaded: false,
       failed: false,
-      search: ""
+      search: "",
     };
   }
 
-  // componentDidMount() {
+  componentDidMount() {
+    const { applicants } = this.state;
 
-  // }
+    setTimeout(() => {
+      this.setState({ applicants: applicantsData, loaded: true });
+    }, 2000);
+    this.groupApplicants(applicants);
+  }
 
-  // getData(data) {
-  //   setTimeout(() => {
-  //     this.setState({ applicants: data, loaded: true });
-  //   }, 2000);
-  // }
+  groupApplicants(applicantsResponse) {
+    const groupedApplicants = {
+      Appointment_Set: [],
+      Property_Viewed: [],
+      Interested: [],
+      Offer_Accepted: [],
+    };
+    applicantsResponse.map((a) => {
+      return groupedApplicants[a.status].push(a);
+    });
+
+    return groupedApplicants;
+  }
 
   handleClick() {
     this.setState({ failed: false });
   }
 
   handleChange(e) {
-    console.log(e.target.value);
     const { value } = e.target;
     this.setState({ search: value });
   }
@@ -46,7 +59,19 @@ class Content extends Component {
   render() {
     const { applicants, loaded, failed, search } = this.state;
 
-    // console.log(applicants)
+    let groups;
+
+    if (search === "") groups = this.groupApplicants(applicants);
+    else {
+      const filtered = applicants.filter((obj) => {
+        const fields = pick(obj, ["firstName", "lastName", "email"]);
+        return Object.keys(fields).some((key) => {
+          return obj[key].match(new RegExp(search, "i"));
+        });
+      });
+
+      groups = this.groupApplicants(filtered);
+    }
 
     if (failed) {
       return (
@@ -70,7 +95,7 @@ class Content extends Component {
       <div className="content">
         <Top />
         <Search value={search} change={this.handleChange.bind(this)} />
-        {loaded ? <GroupedLists data={applicants} /> : <Loading />}
+        {loaded ? <GroupedLists data={groups} /> : <Loading />}
       </div>
     );
   }
