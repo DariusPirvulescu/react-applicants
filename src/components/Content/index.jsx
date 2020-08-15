@@ -14,6 +14,20 @@ import Loading from "../Loading";
 // remake for web
 
 class Content extends Component {
+  static groupApplicants(applicantsResponse) {
+    const groupedApplicants = {
+      Appointment_Set: [],
+      Property_Viewed: [],
+      Interested: [],
+      Offer_Accepted: [],
+    };
+    applicantsResponse.map((a) => {
+      return groupedApplicants[a.status].push(a);
+    });
+
+    return groupedApplicants;
+  }
+
   constructor() {
     super();
     this.state = {
@@ -31,20 +45,6 @@ class Content extends Component {
       this.setState({ applicants: applicantsData, loaded: true });
     }, 2000);
     this.groupApplicants(applicants);
-  }
-
-  groupApplicants(applicantsResponse) {
-    const groupedApplicants = {
-      Appointment_Set: [],
-      Property_Viewed: [],
-      Interested: [],
-      Offer_Accepted: [],
-    };
-    applicantsResponse.map((a) => {
-      return groupedApplicants[a.status].push(a);
-    });
-
-    return groupedApplicants;
   }
 
   handleClick() {
