@@ -43,18 +43,17 @@ class Content extends Component {
 
   componentDidMount() {
     const { applicants } = this.state;
+    const { location } = this.props;
 
     setTimeout(() => {
       this.setState({ applicants: applicantsData, loaded: true });
     }, 2000);
     this.constructor.groupApplicants(applicants);
 
-   
-    const queryObj = queryString.parse(this.props.location.search)
+    const queryObj = queryString.parse(location.search);
 
     const queryStr = queryObj.search;
     this.setState({ search: queryStr });
-    console.log("search in MOUNTTTttt: ", this.state.search)
   }
 
   handleClick() {
@@ -63,24 +62,20 @@ class Content extends Component {
 
   handleChange(e) {
     const { value } = e.target;
+    const { history } = this.props;
     this.setState({ search: value });
 
-    if (value !== ""){
-      console.log("search up", this.state.search)
-      console.log("value", value)
-      this.props.history.push(`/page/?search=${value}`)
+    if (value !== "") {
+      history.push(`/page/?search=${value}`);
     } else {
-      this.props.history.push(`/page/`);
-
+      history.push(`/page/`);
     }
-    
   }
 
   render() {
     const { applicants, loaded, failed, search } = this.state;
 
     let groups;
-    console.log("search in render", search)
 
     if (search === "") groups = this.constructor.groupApplicants(applicants);
     else {
