@@ -53,7 +53,8 @@ class Content extends Component {
     const queryObj = queryString.parse(location.search);
 
     const queryStr = queryObj.search;
-    this.setState({ search: queryStr });
+    console.log("QuerySTrRr:", queryStr)
+    if (queryStr) this.setState({ search: queryStr });
   }
 
   handleClick() {
