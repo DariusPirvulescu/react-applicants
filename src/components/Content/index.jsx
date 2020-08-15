@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Content.scss";
+import queryString from "query-string";
 import { pick } from "lodash";
 import Top from "../Top";
 import Search from "../Search";
@@ -42,11 +43,17 @@ class Content extends Component {
 
   componentDidMount() {
     const { applicants } = this.state;
+    const { location } = this.props;
 
     setTimeout(() => {
       this.setState({ applicants: applicantsData, loaded: true });
     }, 2000);
     this.constructor.groupApplicants(applicants);
+
+    const queryObj = queryString.parse(location.search);
+
+    const queryStr = queryObj.search;
+    this.setState({ search: queryStr });
   }
 
   handleClick() {
@@ -55,7 +62,14 @@ class Content extends Component {
 
   handleChange(e) {
     const { value } = e.target;
+    const { history } = this.props;
     this.setState({ search: value });
+
+    if (value !== "") {
+      history.push(`/page/?search=${value}`);
+    } else {
+      history.push(`/page/`);
+    }
   }
 
   render() {
