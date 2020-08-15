@@ -2,7 +2,7 @@ import React from "react";
 import "./List.scss";
 import ApplicantCard from "../../../ApplicantCard";
 
-const ApplicantList = ({ title, applicants }) => {
+const List = ({ title, applicants }) => {
   //   Appointment_Set”, “Property_Viewed”, “Interested” and
   // “Offer_Accepted”
   return (
@@ -34,4 +34,4 @@ const ApplicantList = ({ title, applicants }) => {
   );
 };
 
-export default ApplicantList;
+export default List;

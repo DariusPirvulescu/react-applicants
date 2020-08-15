@@ -3,18 +3,18 @@ import "./Search.scss";
 import SearchInput from "./Input";
 import Filter from "./Filter";
 
-const Search = () => {
+const Search = ({ value, change }) => {
   return (
     <div className="search">
       <div className="search-input">
-        <SearchInput />
+        <SearchInput value={value} change={change} />
       </div>
       <div className="filter-container">
         <Filter name="Bids" />
         <Filter name="Status" />
       </div>
-     </div>
-  )
-}
+    </div>
+  );
+};
 
 export default Search;

@@ -11,13 +11,15 @@ const StyledTextField = styled(TextField)`
   }
 `;
 
-const SearchInput = () => {
+const SearchInput = ({ value, change }) => {
   return (
     <div>
       <StyledTextField
         className="search-input"
         variant="outlined"
         placeholder="Search for applicant"
+        value={value}
+        onChange={change}
         InputProps={{
           style: { fontSize: "1.2rem" },
           startAdornment: (
