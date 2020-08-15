@@ -7,45 +7,47 @@ import GroupedLists from "./GroupedLists";
 import Loading from "../Loading";
 
 // implement search
+// // search for multiple fields
+// // search updates URL
+// // get search query from URL 
 // remake for web
 
 class Content extends Component {
   constructor() {
     super();
     this.state = {
-      applicants: {},
-      loaded: false,
-      failed: true,
+      applicants: applicantsData,
+      loaded: true,
+      failed: false,
+      search: ""
     };
   }
 
-  componentDidMount() {
-    const groupedApplicants = {
-      Appointment_Set: [],
-      Property_Viewed: [],
-      Interested: [],
-      Offer_Accepted: [],
-    };
+  // componentDidMount() {
 
-    applicantsData.map((a) => {
-      return groupedApplicants[a.status].push(a);
-    });
+  // }
 
-    this.getData(groupedApplicants);
-  }
-
-  getData(data) {
-    setTimeout(() => {
-      this.setState({ applicants: data, loaded: true });
-    }, 2000);
-  }
+  // getData(data) {
+  //   setTimeout(() => {
+  //     this.setState({ applicants: data, loaded: true });
+  //   }, 2000);
+  // }
 
   handleClick() {
     this.setState({ failed: false });
   }
 
+  handleChange(e) {
+    console.log(e.target.value);
+    const { value } = e.target;
+    this.setState({ search: value });
+  }
+
   render() {
-    const { applicants, loaded, failed } = this.state;
+    const { applicants, loaded, failed, search } = this.state;
+
+    // console.log(applicants)
+
     if (failed) {
       return (
         <div className="content">
@@ -67,7 +69,7 @@ class Content extends Component {
     return (
       <div className="content">
         <Top />
-        <Search />
+        <Search value={search} change={this.handleChange.bind(this)} />
         {loaded ? <GroupedLists data={applicants} /> : <Loading />}
       </div>
     );
