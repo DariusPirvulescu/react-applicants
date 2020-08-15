@@ -36,6 +36,8 @@ class Content extends Component {
       failed: false,
       search: "",
     };
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -44,7 +46,7 @@ class Content extends Component {
     setTimeout(() => {
       this.setState({ applicants: applicantsData, loaded: true });
     }, 2000);
-    this.groupApplicants(applicants);
+    this.constructor.groupApplicants(applicants);
   }
 
   handleClick() {
@@ -61,7 +63,7 @@ class Content extends Component {
 
     let groups;
 
-    if (search === "") groups = this.groupApplicants(applicants);
+    if (search === "") groups = this.constructor.groupApplicants(applicants);
     else {
       const filtered = applicants.filter((obj) => {
         const fields = pick(obj, ["firstName", "lastName", "email"]);
@@ -70,7 +72,7 @@ class Content extends Component {
         });
       });
 
-      groups = this.groupApplicants(filtered);
+      groups = this.constructor.groupApplicants(filtered);
     }
 
     if (failed) {
@@ -94,7 +96,7 @@ class Content extends Component {
     return (
       <div className="content">
         <Top />
-        <Search value={search} change={this.handleChange.bind(this)} />
+        <Search value={search} change={this.handleChange} />
         {loaded ? <GroupedLists data={groups} /> : <Loading />}
       </div>
     );
