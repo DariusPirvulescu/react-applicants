@@ -6,10 +6,10 @@ Built with a mobile first responsive design, this project:
 - mocks the API response
 - simulates the loading while fetching the data from API
 - renders applicants based on their status:
--- Appointment_Set
--- Property_Viewed
--- Interested
--- Offer_Accepted
+- - Appointment_Set
+- - Property_Viewed
+- - Interested
+- - Offer_Accepted
 - each rendered card has an avatar with a random color from a defied list of colors, and the applicant's name initials
 - allows users to search for an applicant by "first name", "last name", "email address"
 - updates the query param `?search={search-value}` so users can share their search results via url
