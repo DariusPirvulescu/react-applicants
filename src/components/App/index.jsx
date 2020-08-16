@@ -13,6 +13,7 @@ const App = () => {
         </Route>
         {/* <Route component={Error} /> */}
       </Switch>
+      <h2> FOOTER </h2>
     </div>
   );
 };

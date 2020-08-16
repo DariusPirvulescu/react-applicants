@@ -1,3 +1,5 @@
+@import "../../../../variables.scss";
+
 .applicant-list {
   width: 93%;
   margin: 60px auto;
@@ -15,5 +17,22 @@
     overflow-x: auto;
 
     margin-top: 30px;
+  }
+
+  @media(min-width: $breakpoint-web) {
+    margin: 25px 30px;
+
+    h1 {
+      font-size: 1.1rem;
+    }
+    .horizontal-scroll {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .applicant-list {
+      margin: 40px auto;
+    }
   }
 }

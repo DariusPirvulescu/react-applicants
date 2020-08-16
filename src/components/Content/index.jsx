@@ -110,8 +110,15 @@ class Content extends Component {
 
     return (
       <div className="content">
-        <Top />
-        <Search value={search} change={this.handleChange} />
+        <div className="head">
+          <div>
+            <Top />
+            <Search value={search} change={this.handleChange} />
+          </div>
+          <div className="applicants-count">
+            <h2>COUNT</h2>
+          </div>
+        </div>
         {loaded ? <GroupedLists data={groups} /> : <Loading />}
       </div>
     );
