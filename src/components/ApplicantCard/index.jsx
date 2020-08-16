@@ -52,14 +52,4 @@ const ApplicantCard = ({
   );
 };
 
-// firstName="Joseph"
-//         lastName="Francisk"
-//         phone="+49 212 554 3232"
-//         email="fr.joseph@gmail.com"
-//         status="APPOINTMENT"
-//         date="22 JULY"
-//         time="14:00"
-//         bid="false"
-//         bidAmount="0"
-
 export default ApplicantCard;
