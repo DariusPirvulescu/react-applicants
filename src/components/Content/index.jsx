@@ -4,6 +4,7 @@ import queryString from "query-string";
 import { pick } from "lodash";
 import Top from "../Top";
 import Search from "../Search";
+import Counters from "./GroupedLists/Couters";
 import applicantsData from "../../data/applicants.json";
 import GroupedLists from "./GroupedLists";
 import Loading from "../Loading";
@@ -53,7 +54,7 @@ class Content extends Component {
     const queryObj = queryString.parse(location.search);
 
     const queryStr = queryObj.search;
-    console.log("QuerySTrRr:", queryStr)
+    console.log("QuerySTrRr:", queryStr);
     if (queryStr) this.setState({ search: queryStr });
   }
 
@@ -86,7 +87,6 @@ class Content extends Component {
           return obj[key].match(new RegExp(search, "i"));
         });
       });
-
       groups = this.constructor.groupApplicants(filtered);
     }
 
@@ -108,6 +108,10 @@ class Content extends Component {
       );
     }
 
+    console.log("obj", groups);
+    console.log("viewed:", groups.Property_Viewed.length);
+    console.log("appointment:", groups.Appointment_Set.length);
+
     return (
       <div className="content">
         <div className="head">
@@ -116,7 +120,11 @@ class Content extends Component {
             <Search value={search} change={this.handleChange} />
           </div>
           <div className="applicants-count">
-            <h2>COUNT</h2>
+            <Counters
+              total={applicants.length}
+              viewed={groups.Property_Viewed.length}
+              appointment={groups.Appointment_Set.length}
+            />
           </div>
         </div>
         {loaded ? <GroupedLists data={groups} /> : <Loading />}
