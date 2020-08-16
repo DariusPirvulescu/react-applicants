@@ -6,7 +6,7 @@ import Filter from "./Filter";
 const Search = ({ value, change }) => {
   return (
     <div className="search">
-      <div className="search-input">
+      <div className="search-field">
         <SearchInput value={value} change={change} />
       </div>
       <div className="filter-container">
