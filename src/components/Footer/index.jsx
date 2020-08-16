@@ -4,7 +4,7 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <div className="footer">
-      <p>AGB&#8226;Datenschutz&#8226;Impressum</p>
+      <p>AGB &#8226; Datenschutz &#8226; Impressum</p>
     </div>
   )
 }

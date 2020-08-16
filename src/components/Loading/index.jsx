@@ -6,7 +6,7 @@ const Loading = () => {
   return (
     <div className="loading">
       <StageSpinner size={50} color="#FEB91F" className="spinner" />
-      <h3>Fetching results...</h3>
+      <h4>Fetching results...</h4>
     </div>
   );
 };
