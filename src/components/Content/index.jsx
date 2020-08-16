@@ -9,12 +9,6 @@ import applicantsData from "../../data/applicants.json";
 import GroupedLists from "./GroupedLists";
 import Loading from "../Loading";
 
-// implement search
-// // done search for multiple fields
-// // search updates URL
-// // get search query from URL
-// remake for web
-
 class Content extends Component {
   static groupApplicants(applicantsResponse) {
     const groupedApplicants = {
@@ -107,10 +101,6 @@ class Content extends Component {
         </div>
       );
     }
-
-    console.log("obj", groups);
-    console.log("viewed:", groups.Property_Viewed.length);
-    console.log("appointment:", groups.Appointment_Set.length);
 
     return (
       <div className="content">
