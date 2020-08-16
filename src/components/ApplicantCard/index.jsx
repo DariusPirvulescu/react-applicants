@@ -33,7 +33,7 @@ const ApplicantCard = ({
       </div>
       <Card.Body>
         <Card.Title>
-          {firstName} {lastName}
+          <b>{firstName} {lastName}</b>
         </Card.Title>
         <Card.Text>{phone}</Card.Text>
         <Card.Text>{email}</Card.Text>
