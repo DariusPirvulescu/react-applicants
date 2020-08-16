@@ -33,7 +33,7 @@ const ApplicantCard = ({
       </div>
       <Card.Body>
         <Card.Title>
-          {firstName} {lastName}
+          <b>{firstName} {lastName}</b>
         </Card.Title>
         <Card.Text>{phone}</Card.Text>
         <Card.Text>{email}</Card.Text>
@@ -51,15 +51,5 @@ const ApplicantCard = ({
     </Card>
   );
 };
-
-// firstName="Joseph"
-//         lastName="Francisk"
-//         phone="+49 212 554 3232"
-//         email="fr.joseph@gmail.com"
-//         status="APPOINTMENT"
-//         date="22 JULY"
-//         time="14:00"
-//         bid="false"
-//         bidAmount="0"
 
 export default ApplicantCard;

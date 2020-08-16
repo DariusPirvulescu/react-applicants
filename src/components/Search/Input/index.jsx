@@ -7,7 +7,11 @@ import styled from "styled-components";
 
 const StyledTextField = styled(TextField)`
   & ::-webkit-input-placeholder {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  @media(min-width: $breakpoint-web) {
+    height: 50px;
   }
 `;
 
@@ -21,10 +25,10 @@ const SearchInput = ({ value, change }) => {
         value={value}
         onChange={change}
         InputProps={{
-          style: { fontSize: "1.2rem" },
+          style: { fontSize: "1rem", height: "100%" },
           startAdornment: (
             <InputAdornment position="start">
-              <SearchIcon />
+              <SearchIcon className="search-icon" />
             </InputAdornment>
           ),
         }}
