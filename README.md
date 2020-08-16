@@ -30,6 +30,7 @@ Will start the local server at port 3000 \
 
 Each *component* has its own folder with **index.jsx** and **ComponentName.scss** files in [src/components/](https://github.com/DariusPirvulescu/react-applicants/tree/master/src/components). 
 There are also some nested components ( ex: [Avatar in ApplicantCard](https://github.com/DariusPirvulescu/react-applicants/tree/master/src/components/ApplicantCard) ). 
+
 The [src/](https://github.com/DariusPirvulescu/react-applicants/tree/master/src) folder also contains [data/](https://github.com/DariusPirvulescu/react-applicants/tree/master/src/data), API mock response with the applicants JSON file, and [assets/svg](https://github.com/DariusPirvulescu/react-applicants/tree/master/src/assets/svg) with the svg icons used in Menu component.
 
 ### Packages
