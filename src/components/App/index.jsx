@@ -2,6 +2,7 @@ import React from "react";
 import "./App.scss";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Content from "../Content";
+import Footer from "../Footer";
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
         </Route>
         {/* <Route component={Error} /> */}
       </Switch>
-      <h2> FOOTER </h2>
+      <Footer />
     </div>
   );
 };
