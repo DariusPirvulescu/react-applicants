@@ -1,68 +1,50 @@
+# McMakler Frontend Code Challenge 
+
+This is my attempt at resolving the McMakler Frontend Challenge: coding the applicants page.
+
+Built with a mobile first responsive design, this project: 
+- mocks the API response
+- simulates the loading while fetching the data from API
+- renders applicants based on their status:
+-- Appointment_Set
+-- Property_Viewed
+-- Interested
+-- Offer_Accepted
+- each rendered card has an avatar with a random color from a defied list of colors, and the applicant's name initials
+- allows users to search for an applicant by "first name", "last name", "email address"
+- updates the query param `?search={search-value}` so users can share their search results via url
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm start
+```
+Will start the local server at port 3000 \
+[http://localhost:3000/](http://localhost:3000/)
+
+------
+### Project Structure 
+
+Each *component* has its own folder with **index.jsx** and **ComponentName.scss** files in [src/components/](https://github.com/DariusPirvulescu/react-applicants/tree/master/src/components). 
+There are also some nested components ( ex: [Avatar in ApplicantCard](https://github.com/DariusPirvulescu/react-applicants/tree/master/src/components/ApplicantCard) ). 
+The [src/](https://github.com/DariusPirvulescu/react-applicants/tree/master/src) folder also contains [data/](https://github.com/DariusPirvulescu/react-applicants/tree/master/src/data), API mock response with the applicants JSON file, and [assets/svg](https://github.com/DariusPirvulescu/react-applicants/tree/master/src/assets/svg) with the svg icons used in Menu component.
+
+### Packages
+Among others, this project was built using:
+- bootstrap & react-bootstrap
+- node-sass
+- material-ui/core & material-ui/icons
+- lodash
+- react-router-dom
+- query-string
+- styled-components
+- react-spinners-kit
+
+Some development dependencies used were: *eslint (-config-airbnb)* & *preetier*
+
+----
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
