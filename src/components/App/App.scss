@@ -3,10 +3,10 @@
 
 .App {
   background-color: #F8F8F8;
-  padding-top: 30px;
+  padding-top: 20px;
   min-height: 100vh;
 
   @media(min-width: $breakpoint-web) {
-    padding: 20px 45px;
+    padding: 0 45px;
   }
 }
