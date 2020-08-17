@@ -6,7 +6,7 @@ This is my attempt at resolving the McMakler Frontend Challenge: coding the appl
 [Check it out on Heroku](https://react-applicants-page.herokuapp.com/page, "CTRL/CMD + click to open in a new tab")
 
 Built with a mobile first responsive design, this project: 
-- mocks the API response
+- mocks up the API response
 - simulates the loading while fetching the data from API
 - groups and renders applicants based on their *status*:
 - - Appointment_Set
